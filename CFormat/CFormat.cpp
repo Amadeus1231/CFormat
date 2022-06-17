@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
                // Первая строка -- особый случай.
-               string last;
+string last;
                if (!getline(cin, last))
                               return EXIT_FAILURE;          // Не смогли прочитать и одной строки.
 
