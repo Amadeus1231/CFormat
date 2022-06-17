@@ -22,6 +22,6 @@ int main()
                                              last = next;
                               }
                }
-
+               //asdasdkalskdm
                return EXIT_SUCCESS;
 }
