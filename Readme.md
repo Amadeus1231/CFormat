@@ -21,3 +21,34 @@
 * Добавляем отдельный файлик `CFormat.cpp` из пробного проекта `CFormat` в `git` => команада: `git add CFormat.cpp` .
 * Изменяем файлик и сохраняем в `git` , т.е. в историю. `git commit -m "название сохранения"` .
 * Во время сохранения в `git` наш `script` делает проверку на форматированность и , если какой-нибудь файл в истории не отформатировано, то он его форматирует и выдаёт соотв. сообщение.
+
+
+## `.clang-format`
+
+BasedOnStyle: WebKit  // Базовый стиль
+IndentWidth: 2  // Количества отступов по горизонтали
+UseTab: Never  // отступы в виде табов
+PointerAlignment: Left  // указатель
+AlignAfterOpenBracket: Align  // Выравнивание аргументов после открытой скобки
+AllowAllArgumentsOnNextLine: false  // Если вызов функции или связанный список инициализаторов не помещается в строку, разрешите поместить все аргументы в следующую строку
+SpacesBeforeTrailingComments: 1  // Отступ от кода по горизонтали для комментариев
+MaxEmptyLinesToKeep: 2  // Максимальное количества отступов у блоков между друг другом
+EmptyLineAfterAccessModifier: Leave // Оставляет заданное количество отступов для access в зависимости от MaxEmptyLinesToKeep
+IndentCaseLabels: true  // Уровень между swtich и case
+AccessModifierOffset: -2  // Расположение access в зависимости от IndentWidth
+ObjCBinPackProtocolList: Never // Переводит часть строчки на след. строку, если та преодолела границу по количеству символов
+ColumnLimit: 78  // Максимальное количества символов в одной строке
+AlignOperands: Align  // Выравнивает операныд двоичных и троичных выражений (+)
+SeparateDefinitionBlocks: Always  // Вставляет пустую строку между блоками
+AllowShortFunctionsOnASingleLine: None  //  Может поместить строки в функции в одну строку
+AllowAllConstructorInitializersOnNextLine: true  //  Если конструктор со списком элементов не помещается в одну строку, разрешите поместить все элементы на след. строке
+AllowShortBlocksOnASingleLine: Never  // Может объединить блоки в одну строку
+BreakBeforeBraces: Custom  // Кастомный стиль для фигурных скобок
+BraceWrapping:
+  AfterFunction: true  // Скобки пишутся на след. строке
+  AfterClass: false  // Будут ли пустые скобки находиться на одном уровне с классом
+  SplitEmptyFunction: true  // Не будут ли пустые скобки находиться на одном уровне с функцией (для некоторых исключений)
+  AfterControlStatement: MultiLine  // скобки для условных операторов, скобки с самым высоким оператором будут на след. строке, а последующие на одном уровне с оператором
+  BeforeElse: true  // Завершающая скобка не будет на одном уровне с else
+  AfterCaseLabel: true  // Cкобки не будут на одном уровне с case
+  SplitEmptyRecord: true  // Помещает скобки через уровень у class-ов 
