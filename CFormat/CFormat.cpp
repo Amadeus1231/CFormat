@@ -16,7 +16,7 @@ int on_msg_begin(http_parser* apParser)
     return -33;
   }
 
-                                return pObj->onMsgBegin();
+  return pObj->onMsgBegin();
 }
 //---------------------------------------------------------------------------
 
